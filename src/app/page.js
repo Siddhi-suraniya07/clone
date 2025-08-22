@@ -384,7 +384,7 @@ export default function Home() {
         className="mb-2"
         style={{
           width: "100%",
-          height: "300px", // ⬅ increased from 220px
+          height: "300px", 
           position: "relative",
         }}
       >
