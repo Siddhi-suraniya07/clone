@@ -208,9 +208,9 @@ export default function Home() {
         >
           <div className="scroll-text-wrapper" style={{ height: "14px" }}>
             <div className="scroll-text">
-              <span>// 01 Design Everything</span>
-              <span>// 02 Adopt New Realities</span>
-              <span>// 03 Use Your Headlights</span>
+              <span>/  01 Design Everything</span>
+              <span>/  02 Adopt New Realities</span>
+              <span>/ 03 Use Your Headlights</span>
             </div>
           </div>
         </div>
