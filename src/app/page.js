@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowsFullscreen, ArrowsAngleContract } from "react-bootstrap-icons";
 import { Star, CircleDollarSign, Sparkles } from "lucide-react";
 
 export default function Home() {
@@ -193,7 +192,7 @@ export default function Home() {
       {/* Header Row */}
       <div
         className="d-flex justify-content-between align-items-center px-3"
-        style={{ height: "8px" }} 
+        style={{ height: "8px" }}
       >
         {/* Left Icons */}
         <div className="d-flex gap-3 text-light">
@@ -227,7 +226,7 @@ export default function Home() {
 
       <div
         className="d-flex align-items-center my-3"
-        style={{ marginTop: "-80px" }} 
+        style={{ marginTop: "-80px" }}
       >
         <span style={{ fontSize: "1.5rem", fontWeight: "100", color: "#FFF" }}>
           +
@@ -241,30 +240,29 @@ export default function Home() {
         </span>
       </div>
 
-<section
-  className="text-center w-100 m-0"
-  style={{
-    padding: "0",
-    overflow: "hidden",
-    width: "100vw",     
-    height: "14vh",    
-  }}
->
-  <h1
-    className="display-1 text-uppercase"
-    style={{
-      fontSize: "7rem",
-      fontWeight: "600",
-      transform: "scaleX(1.5)",
-      margin: "0",
-      lineHeight: "0.9",
-      overflow: "hidden", // make sure text itself never triggers scroll
-    }}
-  >
-    STUDIO FREIGHT
-  </h1>
-</section>
-
+      <section
+        className="text-center w-100 m-0"
+        style={{
+          padding: "0",
+          overflow: "hidden",
+          width: "100vw",
+          height: "14vh",
+        }}
+      >
+        <h1
+          className="display-1 text-uppercase"
+          style={{
+            fontSize: "7rem",
+            fontWeight: "600",
+            transform: "scaleX(1.5)",
+            margin: "0",
+            lineHeight: "0.9",
+            overflow: "hidden",
+          }}
+        >
+          STUDIO FREIGHT
+        </h1>
+      </section>
 
       <div
         className="d-flex align-items-center my-3"
@@ -283,13 +281,13 @@ export default function Home() {
       </div>
 
       <section
-        className="container-fluid text-light py-3" 
-        style={{ backgroundColor: "#000", marginTop: "-30px" }} 
+        className="container-fluid text-light py-3"
+        style={{ backgroundColor: "#000", marginTop: "-30px" }}
       >
         <div className="row">
           {/* About & Services */}
           <div className="col-md-3 px-4" style={{ height: "auto" }}>
-            <h5 className="fw-bold mb-2">ABOUT</h5> 
+            <h5 className="fw-bold mb-2">ABOUT</h5>
             <p style={{ fontSize: "13px", color: "#ddd" }}>
               Studio Freight is an independent creative studio building brands,
               digital experiences, and technology to move missions forward.
@@ -298,7 +296,7 @@ export default function Home() {
               Our clients see us as trusted partners who care as much as they
               do, which is just a ruse because we actually care even more...
             </p>
-            <h5 className="fw-bold mt-3">SERVICES</h5> 
+            <h5 className="fw-bold mt-3">SERVICES</h5>
             <ul className="list-unstyled mt-2">
               <li>→ Brand Strategy</li>
               <li style={{ color: "#666" }}>→ Verbal Identity</li>
@@ -311,7 +309,7 @@ export default function Home() {
             style={{
               display: "flex",
               flexDirection: "column",
-              height: "300px", 
+              height: "300px",
             }}
           >
             <h5
@@ -320,7 +318,7 @@ export default function Home() {
                 position: "sticky",
                 top: "0",
                 backgroundColor: "#000",
-                padding: "6px 0", 
+                padding: "6px 0",
                 zIndex: 10,
               }}
             >
@@ -330,7 +328,7 @@ export default function Home() {
             <ul
               className="list-unstyled"
               style={{
-                maxHeight: "280px", 
+                maxHeight: "280px",
                 overflowY: "scroll",
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
@@ -343,7 +341,7 @@ export default function Home() {
                   className="d-flex justify-content-between align-items-center py-1 px-1 border-bottom"
                   style={{
                     cursor: "pointer",
-                    fontSize: "18px", 
+                    fontSize: "18px",
                     fontWeight:
                       selectedProject.name === project.name ? "bold" : "normal",
                     color:
@@ -370,48 +368,52 @@ export default function Home() {
           </div>
 
           {/* Project Detail */}
-          <div className="col-md-6 px-4">
-            <h5 className="fw-bold mb-2">PROJECT DETAIL</h5>
-            <div
-              className="bg-dark p-2"
-              style={{
-                borderRadius: "8px",
-                height: "280px", 
-                overflowY: "scroll",
-                scrollbarWidth: "none",
-                msOverflowStyle: "none",
-              }}
-            >
-              <style jsx>{`
-                div::-webkit-scrollbar {
-                  display: none;
-                }
-              `}</style>
+       <div className="col-md-6 px-4">
+  <h5 className="fw-bold mb-2">PROJECT DETAIL</h5>
+  <div
+    className="bg-dark p-2 project-scroll"
+    style={{
+      borderRadius: "8px",
+      height: "280px",
+      overflowY: "scroll",
+    }}
+  >
+    {selectedProject.images.map((img, idx) => (
+      <div
+        key={idx}
+        className="mb-2"
+        style={{
+          width: "100%",
+          height: "300px", // ⬅ increased from 220px
+          position: "relative",
+        }}
+      >
+        <Image
+          src={img}
+          alt={`${selectedProject.name} page ${idx + 1}`}
+          fill
+          className="img-fluid"
+          style={{
+            objectFit: "cover",
+            borderRadius: "6px",
+          }}
+        />
+      </div>
+    ))}
+  </div>
 
-              {selectedProject.images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="mb-2"
-                  style={{ width: "100%", height: "220px" }} 
-                >
-                  <Image
-                    src={img}
-                    alt={`${selectedProject.name} page ${idx + 1}`}
-                    layout="responsive"
-                    width={500}
-                    height={220}
-                    className="img-fluid"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      borderRadius: "6px",
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+  {/* ✅ Proper CSS (no inline <style jsx>) */}
+  <style jsx>{`
+    .project-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .project-scroll {
+      -ms-overflow-style: none; /* IE/Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  `}</style>
+</div>
+
         </div>
       </section>
 
