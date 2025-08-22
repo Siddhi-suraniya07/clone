@@ -193,14 +193,14 @@ export default function Home() {
       {/* Header Row */}
       <div
         className="d-flex justify-content-between align-items-center px-3"
-        style={{ height: "8px" }} // total header height
+        style={{ height: "8px" }} 
       >
         {/* Left Icons */}
-<div className="d-flex gap-3 text-light">
-  <Star size={30} />
-  <CircleDollarSign size={30} />
-  <Sparkles size={30} />
-</div>
+        <div className="d-flex gap-3 text-light">
+          <Star size={30} />
+          <CircleDollarSign size={30} />
+          <Sparkles size={30} />
+        </div>
 
         {/* Center Menu */}
         <div
@@ -227,7 +227,7 @@ export default function Home() {
 
       <div
         className="d-flex align-items-center my-3"
-        style={{ marginTop: "-80px" }} // increased negative margin to move upwards
+        style={{ marginTop: "-80px" }} 
       >
         <span style={{ fontSize: "1.5rem", fontWeight: "100", color: "#FFF" }}>
           +
@@ -241,23 +241,30 @@ export default function Home() {
         </span>
       </div>
 
-      <section
-        className="text-center border-secondary w-100 m-0"
-        style={{ padding: "0", overflowX: "hidden" }} // no padding
-      >
-        <h1
-          className="display-1 text-uppercase"
-          style={{
-            fontSize: "7rem", // adjust if you want larger/smaller text
-            fontWeight: "600", // reduced weight if needed
-            transform: "scaleX(1.5)",
-            margin: "0", // removes default h1 margin
-            lineHeight: "0.9", // even tighter vertical spacing
-          }}
-        >
-          STUDIO FREIGHT
-        </h1>
-      </section>
+<section
+  className="text-center w-100 m-0"
+  style={{
+    padding: "0",
+    overflow: "hidden",
+    width: "100vw",     
+    height: "14vh",    
+  }}
+>
+  <h1
+    className="display-1 text-uppercase"
+    style={{
+      fontSize: "7rem",
+      fontWeight: "600",
+      transform: "scaleX(1.5)",
+      margin: "0",
+      lineHeight: "0.9",
+      overflow: "hidden", // make sure text itself never triggers scroll
+    }}
+  >
+    STUDIO FREIGHT
+  </h1>
+</section>
+
 
       <div
         className="d-flex align-items-center my-3"
@@ -276,13 +283,13 @@ export default function Home() {
       </div>
 
       <section
-        className="container-fluid text-light py-3" // 👈 reduced padding (was py-5)
-        style={{ backgroundColor: "#000", marginTop: "-30px" }} // 👈 less margin
+        className="container-fluid text-light py-3" 
+        style={{ backgroundColor: "#000", marginTop: "-30px" }} 
       >
         <div className="row">
           {/* About & Services */}
           <div className="col-md-3 px-4" style={{ height: "auto" }}>
-            <h5 className="fw-bold mb-2">ABOUT</h5> {/* 👈 reduced margin */}
+            <h5 className="fw-bold mb-2">ABOUT</h5> 
             <p style={{ fontSize: "13px", color: "#ddd" }}>
               Studio Freight is an independent creative studio building brands,
               digital experiences, and technology to move missions forward.
@@ -291,7 +298,7 @@ export default function Home() {
               Our clients see us as trusted partners who care as much as they
               do, which is just a ruse because we actually care even more...
             </p>
-            <h5 className="fw-bold mt-3">SERVICES</h5> {/* 👈 reduced margin */}
+            <h5 className="fw-bold mt-3">SERVICES</h5> 
             <ul className="list-unstyled mt-2">
               <li>→ Brand Strategy</li>
               <li style={{ color: "#666" }}>→ Verbal Identity</li>
@@ -304,7 +311,7 @@ export default function Home() {
             style={{
               display: "flex",
               flexDirection: "column",
-              height: "300px", // 👈 was 380px
+              height: "300px", 
             }}
           >
             <h5
@@ -313,7 +320,7 @@ export default function Home() {
                 position: "sticky",
                 top: "0",
                 backgroundColor: "#000",
-                padding: "6px 0", // 👈 reduced padding
+                padding: "6px 0", 
                 zIndex: 10,
               }}
             >
@@ -323,7 +330,7 @@ export default function Home() {
             <ul
               className="list-unstyled"
               style={{
-                maxHeight: "280px", // 👈 was 400px
+                maxHeight: "280px", 
                 overflowY: "scroll",
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
@@ -336,7 +343,7 @@ export default function Home() {
                   className="d-flex justify-content-between align-items-center py-1 px-1 border-bottom"
                   style={{
                     cursor: "pointer",
-                    fontSize: "18px", // 👈 smaller text
+                    fontSize: "18px", 
                     fontWeight:
                       selectedProject.name === project.name ? "bold" : "normal",
                     color:
@@ -369,7 +376,7 @@ export default function Home() {
               className="bg-dark p-2"
               style={{
                 borderRadius: "8px",
-                height: "280px", // 👈 was 350px
+                height: "280px", 
                 overflowY: "scroll",
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
@@ -385,7 +392,7 @@ export default function Home() {
                 <div
                   key={idx}
                   className="mb-2"
-                  style={{ width: "100%", height: "220px" }} // 👈 was 300px
+                  style={{ width: "100%", height: "220px" }} 
                 >
                   <Image
                     src={img}
@@ -438,10 +445,10 @@ export default function Home() {
           </div>
 
           {/* Links Column 1 */}
-         <div className="col-md-2 mb-2">
-  <div style={{ marginBottom: "12px" }}>GITHUB</div> {/* 👈 gap added */}
-  <div>LENIS</div>
-</div>
+          <div className="col-md-2 mb-2">
+            <div style={{ marginBottom: "12px" }}>GITHUB</div>
+            <div>LENIS</div>
+          </div>
 
           {/* Links Column 2 */}
           <div className="col-md-2 mb-2">
