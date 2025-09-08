@@ -8,180 +8,22 @@ export default function Home() {
     {
       name: "XYTHUM",
       category: "WEB3",
-      images: [
-        "/images/p11.png",
-        "/images/p12.png",
-        "/images/p13.png",
-        "/images/p14.png",
-        "/images/p15.png",
-        "/images/p16.png",
-        "/images/p17.png",
-        "/images/p18.png",
-        "/images/p19.png",
-        "/images/p20.png",
-        "/images/p21.png",
-      ],
+      route: "/projects/xythum", // 👈 link to the real site
     },
     {
       name: "VEKE",
       category: "FINANCE",
-      images: [
-        "/images/s11.png",
-        "/images/s12.png",
-        "/images/s13.png",
-        "/images/s14.png",
-        "/images/s15.png",
-        "/images/s16.png",
-        "/images/s17.png",
-        "/images/s18.png",
-        "/images/s19.png",
-        "/images/s20.png",
-        "/images/s21.png",
-        "/images/s22.png",
-        "/images/s23.png",
-        "/images/s24.png",
-        "/images/s25.png",
-      ],
+      route: "/projects/veke",
     },
     {
       name: "GOAT TRADER",
       category: "AI",
-      images: [
-        "/images/b11.png",
-        "/images/b12.png",
-        "/images/b13.png",
-        "/images/b14.png",
-        "/images/b15.png",
-        "/images/b16.png",
-      ],
+      route: "/projects/goat-trader",
     },
     {
       name: "DUDIES",
       category: "COMMERCE",
-      images: [
-        "/images/t11.png",
-        "/images/t12.png",
-        "/images/t15.png",
-        "/images/t16.png",
-        "/images/t18.png",
-        "/images/t19.png",
-        "/images/t211.png",
-        "/images/t22.png",
-        "/images/t41.png",
-        "/images/t42.png",
-        "/images/t43.png",
-        "/images/t51.png",
-        "/images/t7.png",
-      ],
-    },
-    {
-      name: "XYTHUM",
-      category: "WEB3",
-      images: [
-        "/images/p11.png",
-        "/images/p12.png",
-        "/images/p13.png",
-        "/images/p14.png",
-        "/images/p15.png",
-        "/images/p16.png",
-        "/images/p17.png",
-        "/images/p18.png",
-        "/images/p19.png",
-        "/images/p20.png",
-        "/images/p21.png",
-      ],
-    },
-    {
-      name: "VEKE",
-      category: "FINANCE",
-      images: [
-        "/images/s11.png",
-        "/images/s12.png",
-        "/images/s13.png",
-        "/images/s14.png",
-        "/images/s15.png",
-        "/images/s16.png",
-        "/images/s17.png",
-        "/images/s18.png",
-        "/images/s19.png",
-        "/images/s20.png",
-        "/images/s21.png",
-        "/images/s22.png",
-        "/images/s23.png",
-        "/images/s24.png",
-        "/images/s25.png",
-      ],
-    },
-    {
-      name: "GOAT TRADER",
-      category: "AI",
-      images: [
-        "/images/b11.png",
-        "/images/b12.png",
-        "/images/b13.png",
-        "/images/b14.png",
-        "/images/b15.png",
-        "/images/b16.png",
-      ],
-    },
-    {
-      name: "GOAT TRADER",
-      category: "AI",
-      images: [
-        "/images/b11.png",
-        "/images/b12.png",
-        "/images/b13.png",
-        "/images/b14.png",
-        "/images/b15.png",
-        "/images/b16.png",
-      ],
-    },
-    {
-      name: "GOAT TRADER",
-      category: "AI",
-      images: [
-        "/images/b11.png",
-        "/images/b12.png",
-        "/images/b13.png",
-        "/images/b14.png",
-        "/images/b15.png",
-        "/images/b16.png",
-      ],
-    },
-    {
-      name: "RRE VENTURES",
-      category: "VENTURE",
-      images: ["/projects/rre1.png", "/projects/rre2.png"],
-    },
-    {
-      name: "BREX AI",
-      category: "FINANCE",
-      images: ["/projects/brexai1.png", "/projects/brexai2.png"],
-    },
-    {
-      name: "BREX AI",
-      category: "FINANCE",
-      images: ["/projects/brexai1.png", "/projects/brexai2.png"],
-    },
-    {
-      name: "BREX AI",
-      category: "FINANCE",
-      images: ["/projects/brexai1.png", "/projects/brexai2.png"],
-    },
-    {
-      name: "BREX AI",
-      category: "FINANCE",
-      images: ["/projects/brexai1.png", "/projects/brexai2.png"],
-    },
-    {
-      name: "BREX AI",
-      category: "FINANCE",
-      images: ["/projects/brexai1.png", "/projects/brexai2.png"],
-    },
-    {
-      name: "BREX AI",
-      category: "FINANCE",
-      images: ["/projects/brexai1.png", "/projects/brexai2.png"],
+      route: "/projects/dudies",
     },
   ];
 
@@ -208,8 +50,8 @@ export default function Home() {
         >
           <div className="scroll-text-wrapper" style={{ height: "14px" }}>
             <div className="scroll-text">
-              <span>/  01 Design Everything</span>
-              <span>/  02 Adopt New Realities</span>
+              <span>/ 01 Design Everything</span>
+              <span>/ 02 Adopt New Realities</span>
               <span>/ 03 Use Your Headlights</span>
             </div>
           </div>
@@ -368,51 +210,37 @@ export default function Home() {
           </div>
 
           {/* Project Detail */}
-       <div className="col-md-6 px-4">
-  <h5 className="fw-bold mb-2">PROJECT DETAIL</h5>
-  <div
-    className="bg-dark p-2 project-scroll"
-    style={{
-      borderRadius: "8px",
-      height: "280px",
-      overflowY: "scroll",
-    }}
-  >
-    {selectedProject.images.map((img, idx) => (
-      <div
-        key={idx}
-        className="mb-2"
-        style={{
-          width: "100%",
-          height: "300px", 
-          position: "relative",
-        }}
-      >
-        <Image
-          src={img}
-          alt={`${selectedProject.name} page ${idx + 1}`}
-          fill
-          className="img-fluid"
-          style={{
-            objectFit: "cover",
-            borderRadius: "6px",
-          }}
-        />
-      </div>
-    ))}
+{/* Project Detail */}
+  <div className="col-md-6 p-0 d-flex flex-column">
+    <h5 className="fw-bold mb-2" style={{ margin: "0" }}>
+      PROJECT DETAIL
+    </h5>
+
+   <div
+  className="bg-dark project-scroll flex-grow-1"
+  style={{
+    borderRadius: "8px",
+    overflowY: "auto",     // allow scroll inside container
+    // height: "100vh",  
+    margin: "0",
+  }}
+>
+<iframe
+  src={selectedProject.route}
+  style={{
+    width: "100%",
+    height: "100%",
+    border: "none",
+    borderRadius: "6px",
+    display: "block",
+  }}
+  scrolling="yes"   // 👈 forces iframe scrollbar
+/>
+
+</div>
+
   </div>
 
-  {/* ✅ Proper CSS (no inline <style jsx>) */}
-  <style jsx>{`
-    .project-scroll::-webkit-scrollbar {
-      display: none;
-    }
-    .project-scroll {
-      -ms-overflow-style: none; /* IE/Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-  `}</style>
-</div>
 
         </div>
       </section>
