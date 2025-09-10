@@ -11,9 +11,9 @@ export default function Home() {
       route: "/projects/xythum", // 👈 link to the real site
     },
     {
-      name: "VEKE",
+      name: "weka_case-study",
       category: "FINANCE",
-      route: "/projects/veke",
+      route: "/projects/weka_case-study",
     },
     {
       name: "GOAT TRADER",
@@ -220,9 +220,10 @@ export default function Home() {
   className="bg-dark project-scroll flex-grow-1"
   style={{
     borderRadius: "8px",
-    overflowY: "auto",     // allow scroll inside container
-    // height: "100vh",  
+    overflowY: "scroll",     // force scroll inside container
+    height: "250px",
     margin: "0",
+    position: "relative",
   }}
 >
 <iframe
@@ -234,7 +235,7 @@ export default function Home() {
     borderRadius: "6px",
     display: "block",
   }}
-  scrolling="yes"   // 👈 forces iframe scrollbar
+  scrolling="yes"
 />
 
 </div>
@@ -247,7 +248,7 @@ export default function Home() {
 
       <div
         className="d-flex align-items-center my-3 position-absolute w-100"
-        style={{ bottom: "75px", left: "0" }}
+        style={{ bottom: "15px", left: "0" }}
       >
         <span style={{ fontSize: "1.5rem", fontWeight: "100", color: "#FFF" }}>
           +

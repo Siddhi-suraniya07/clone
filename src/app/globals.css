@@ -55,8 +55,28 @@ ul::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 html, body {
-  overflow: hidden;   /* disables both vertical and horizontal scroll */
   height: 100%;       /* ensures body takes full viewport height */
   margin: 0;
   padding: 0;
+}
+
+/* Hide scrollbars but keep scrolling functionality */
+html {
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* WebKit browsers (Chrome, Safari, Edge) */
+}
+
+body {
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* WebKit browsers (Chrome, Safari, Edge) */
 }
